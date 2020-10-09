@@ -50,8 +50,9 @@ components:
             max: 90.0
             frozen: true
             error: 0.0
--   name: iem_v06
-    type: BackgroundModel
+-   type: FoVBackgroundModel
+    datasets_names:
+    - Fermi-LAT
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
@@ -76,5 +77,3 @@ components:
             max: .nan
             frozen: true
             error: 0.0
-    datasets_names:
-    - Fermi-LAT
