@@ -89,8 +89,8 @@ components:
             max: .nan
             frozen: true
             error: 0
--   name: gc-bkg
-    type: BackgroundModel
+-   type: FoVBackgroundModel
+    datasets_names: [gc]
     parameters:
     -   name: norm
         value: 1.0
@@ -113,8 +113,6 @@ components:
         max: .nan
         frozen: true
         error: 0
-    datasets_names:
-    - gc
 -   name: g09
     type: SkyModel
     spectral:
@@ -174,8 +172,8 @@ components:
             max: 90.0
             frozen: false
             error: 0
--   name: g09-bkg
-    type: BackgroundModel
+-   type: FoVBackgroundModel
+    datasets_names: [g09]
     parameters:
     -   name: norm
         value: 1.0
@@ -198,5 +196,3 @@ components:
         max: .nan
         frozen: true
         error: 0
-    datasets_names:
-    - g09
