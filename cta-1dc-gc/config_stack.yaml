@@ -13,9 +13,9 @@ datasets:
     geom:
         wcs:
             skydir: {frame: galactic, lon: 0.0 deg, lat: 0.0 deg}
-            binsize: 0.05 deg
+            binsize: 0.025 deg
             fov: {width: 8.0 deg, height: 6.0 deg}
-            binsize_irf: 1.0 deg
+            binsize_irf: 0.5 deg
         selection: {offset_max: 3.5 deg}
         axes:
             energy: {min: 0.1 TeV, max: 10.0 TeV, nbins: 10}
