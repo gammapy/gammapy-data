@@ -127,7 +127,7 @@ def clean_up(table_in):
     table['energy_flux_err_lo'] = table_in['ed_vFv'] 
     table['energy_flux_err_hi'] = table_in['eu_vFv']
     # Compute symmetrical error because most chi^2 fitters
-    # can't handle asymmetrical Gaussian erros
+    # can't handle asymmetrical Gaussian errors
     table['energy_flux_err'] = 0.5 * (table_in['eu_vFv'] + table_in['ed_vFv'])
 
     table['component'] = table_in['component']
