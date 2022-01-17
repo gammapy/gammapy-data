@@ -43,6 +43,7 @@ def run_crab_hess_fp():
     analysis.set_models(models)
     analysis.run_fit()
     analysis.get_flux_points()
+    analysis.flux_points.write("crab_hess_fp/crab_hess_fp.fits", overwrite=True)
 
 
 if __name__ == "__main__":

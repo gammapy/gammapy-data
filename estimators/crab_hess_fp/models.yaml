@@ -14,14 +14,14 @@ components:
         type: PowerLawSpectralModel
       spatial:
           parameters:
-              - frozen: false
+              - frozen: true
                 name: lon_0
                 unit: deg
                 value: 83.633
-              - frozen: false
+              - frozen: true
                 name: lat_0
                 unit: deg
-                value: 22.14
+                value: 22.014
           type: PointSpatialModel        
       type: SkyModel
     

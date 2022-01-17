@@ -7,7 +7,7 @@ observations:
     obs_file: null
     obs_cone: {frame: icrs, lon: 83.633 deg, lat: 22.014 deg, radius: 5.0 deg}
     obs_time: {start: null, stop: null}
-    required_irf: [aeff, edisp, psf, bkg]
+    required_irf: [aeff, edisp, bkg]
 datasets:
     type: 1d
     stack: true
@@ -25,7 +25,7 @@ datasets:
     on_region: {frame: icrs, lon: 83.63 deg, lat: 22.01 deg, radius: 0.11 deg}
     containment_correction: true
 fit:
-    fit_range: {min: 0.4 TeV, max: 20.0 TeV}
+    fit_range: {min: 0.6 TeV, max: 20.0 TeV}
 flux_points:
     energy: {min: 0.4 TeV, max: 20.0 TeV, nbins: 10}
     source: Crab
