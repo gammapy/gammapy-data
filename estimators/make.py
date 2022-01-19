@@ -9,7 +9,7 @@ from gammapy.modeling.models import Models
 
 log = logging.getLogger(__name__)
 
-AVAILABLE_ESTIMATES = ["crab_hess_fp"]
+AVAILABLE_ESTIMATES = ["crab_hess_fp", "pks2155_hess_lc"]
 
 @click.group()
 @click.option(
@@ -28,22 +28,30 @@ def cli(log_level, show_warnings):
 def create(estimates):
     estimates = list(AVAILABLE_ESTIMATES) if estimates == "all" else [estimates]
 
-    if "crab_hess_fp" in estimates:
-        run_crab_hess_fp()
+    for estimate in estimates:
+        analysis = run_analysis(estimate)
+
+        if estimate is "crab_hess_fp":
+            analysis.get_flux_points()
+            analysis.flux_points.write(f"{estimate}/{estimate}.fits", overwrite=True)
+
+        elif estimate is "pks2155_hess_lc":
+            analysis.get_light_curve()
+            analysis.light_curve.write(f"{estimate}/{estimate}.fits", format="lightcurve", overwrite=True)
 
 
 
-def run_crab_hess_fp():
-    config = AnalysisConfig.read("crab_hess_fp/config.yaml")
+def run_analysis(estimate):
+    """Run analysis from observation selection to model fitting."""
+    config = AnalysisConfig.read(f"{estimate}/config.yaml")
     analysis = Analysis(config)
     analysis.get_observations()
     analysis.get_datasets()
 
-    models = Models.read("crab_hess_fp/models.yaml")
+    models = Models.read(f"{estimate}/models.yaml")
     analysis.set_models(models)
     analysis.run_fit()
-    analysis.get_flux_points()
-    analysis.flux_points.write("crab_hess_fp/crab_hess_fp.fits", overwrite=True)
+    return analysis
 
 
 if __name__ == "__main__":
