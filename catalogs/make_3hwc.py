@@ -34,7 +34,7 @@ def get_flux_measurement(entry):
 
 def make_3hwc():
     with open('3HWC.yaml') as fh:
-        data = yaml.load(fh)
+        data = yaml.load(fh, Loader=yaml.Loader)
 
     from pprint import pprint;
     pprint(data[0])
@@ -113,19 +113,19 @@ def add_flux_measurements(table, data):
     )
     table[f'spec{idx}_index_errn'] = Column(
         data=[_['index statistical uncertainty down'] for _ in flux_data],
-        description=f'Statistical negative error on spec{idx}_index', format='.2f',
+        description=f'Statistical negative error on spec{idx}_index', format='.3f',
     )
     table[f'spec{idx}_index_errp'] = Column(
         data=[_['index statistical uncertainty up'] for _ in flux_data],
-        description=f'Statistical positive error on spec{idx}_index', format='.2f',
+        description=f'Statistical positive error on spec{idx}_index', format='.3f',
     )
     table[f'spec{idx}_index_sys_errn'] = Column(
         data=[_['index systematic uncertainty down'] for _ in flux_data],
-        description=f'Systematic negative error on spec{idx}_index', format='.2f',
+        description=f'Systematic negative error on spec{idx}_index', format='.3f',
     )
     table[f'spec{idx}_index_sys_errp'] = Column(
         data=[_['index systematic uncertainty up'] for _ in flux_data],
-        description=f'Systematic positive error on spec{idx}_index', format='.2f',
+        description=f'Systematic positive error on spec{idx}_index', format='.3f',
     )
     table[f'spec{idx}_radius'] = Column(
         data=[_['assumed radius'] for _ in flux_data],
