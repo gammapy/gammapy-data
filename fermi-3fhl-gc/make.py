@@ -16,7 +16,7 @@ def get_dataset():
         "$GAMMAPY_DATA/fermi-3fhl-gc/fermi-3fhl-gc-exposure-cube.fits.gz"
     )
 
-    # for some reason the WCS defintions are not aligned...
+    # for some reason the WCS definitions are not aligned...
     exposure.geom._wcs = counts.geom.wcs
 
     psf = PSFMap.read(

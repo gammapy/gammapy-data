@@ -1,4 +1,4 @@
-# Models for extragalactic backgound light (EBL)
+# Models for extragalactic background light (EBL)
 
 Available models are:
  - Franceschini 2008 (http://adsabs.harvard.edu/abs/2008A%26A...487..837F)
