@@ -10,6 +10,7 @@ import astropy.units as u
 import numpy as np
 from astropy.table import Table
 from pandas import read_csv
+import gammapy
 
 df = read_csv("lhaaso_cat.csv")
 
@@ -111,7 +112,8 @@ meta_dict = {
     "NAME": "1LHAASO: The First LHAASO Catalog of Gamma-Ray Sources.",
     "VERSION": "ArXiv May 29, 2023",
     "DOI": "https://doi.org/10.48550/arXiv.2305.17030",
-    "contact": "Corresponding authors: S.Q. Xi, S.C. Hu, S.Z. Chen, M. Zha xisq@ihep.ac.cn, hushicong@ihep.ac.cn, chensz@ihep.ac.cn, zham@ihep.ac.cn",
+    "CONTACT": "Corresponding authors: S.Q. Xi, S.C. Hu, S.Z. Chen, M. Zha xisq@ihep.ac.cn, hushicong@ihep.ac.cn, chensz@ihep.ac.cn, zham@ihep.ac.cn",
+    "CREATOR": f"gammapy version {gammapy.__version__.split('dev')[0].split('rc')[0]}",
 }
 table.meta.update(meta_dict)
 table.write("1LHAASO_catalog.fits", overwrite=True)
