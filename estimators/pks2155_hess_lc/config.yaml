@@ -91,4 +91,4 @@ light_curve:
               '2006-07-30T02:00:00.000', '2006-07-30T02:10:00.000']
     energy_edges: {min: 0.5 TeV, max: 7 TeV, nbins: 1}
     source: pks2155
-    parameters: {selection_optional: null}
+    parameters: {selection_optional: all}
