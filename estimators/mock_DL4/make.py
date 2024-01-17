@@ -103,5 +103,5 @@ dataset.models = model
 dataset.fake(random_state=42)
 
 # Save the energy dependent mock dataset
-dataset.write('dataset_energy_dependent2.fits.gz', overwrite=True)
+dataset.write('dataset_energy_dependent.fits.gz', overwrite=True)
 
