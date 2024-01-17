@@ -99,8 +99,8 @@ dataset = maker_safe_mask.run(dataset, obs)
 
 # Add the model on the dataset and Poission fluctuate
 dataset.models = model
-dataset.fake()
+dataset.fake(random_state=42)
 
 # Save the energy dependent mock dataset
-dataset.write('dataset_energy_dependent.fits', overwrite=True)
+dataset.write('dataset_energy_dependent.fits.gz', overwrite=True)
 
