@@ -10,11 +10,10 @@ from gammapy.makers import MapDatasetMaker, SafeMaskMaker
 from gammapy.maps import MapAxis, WcsGeom
 
 from astropy import units as u
-from astropy.coordinates import SkyCoord, angular_separation
+from astropy.coordinates import angular_separation
 import numpy as np
 
 # To create an energy-dependent morphology we start by defining parameters for different energies
-
 class MyCustomGaussianModel(SpatialModel):
     """My custom Energy Dependent Gaussian model.
 
@@ -61,47 +60,50 @@ class MyCustomGaussianModel(SpatialModel):
     def evaluation_radius(self):
         """Evaluation radius (`~astropy.coordinates.Angle`)."""
         return 2 * np.max([self.sigma_1TeV.value, self.sigma_10TeV.value]) * u.deg
-        
-# Create spatial model        
-spatial_model = MyCustomGaussianModel()
 
-# Define energy and geometry for the dataset
-energy_axis = MapAxis.from_edges(np.logspace(-1.0, 2, 10), unit="TeV", name="energy", interp="log")
-geom = WcsGeom.create(skydir=(5.6, 0.2), width=4*u.deg, 
-                      binsz=0.02, axes=[energy_axis], frame='galactic')
-                      
-# Define spectral model and SkyModel
-spectral_model = PowerLawSpectralModel(index=3, amplitude="6e-12 cm-2 s-1 TeV-1", reference="1 TeV")
-model = SkyModel(spatial_model=spatial_model, spectral_model=spectral_model, name="model1")
+def energy_dependent_morphology():
+    # Create spatial model
+    spatial_model = MyCustomGaussianModel()
 
-# Set up IRFs for CTA dataset
-irfs = load_irf_dict_from_file(
-    "$GAMMAPY_DATA/cta-1dc/caldb/data/cta/1dc/bcf/South_z20_50h/irf_file.fits"
-)
-livetime = 10.0 * u.hr
+    # Define energy and geometry for the dataset
+    energy_axis = MapAxis.from_edges(np.logspace(-1.0, 2, 10), unit="TeV", name="energy", interp="log")
+    geom = WcsGeom.create(skydir=(5.6, 0.2), width=4*u.deg,
+                          binsz=0.02, axes=[energy_axis], frame='galactic')
 
-# Simulate an observation pointing at a fixed position in the sky.
-pointing = FixedPointingInfo(
-    fixed_icrs=geom.center_skydir.icrs,
-)
+    # Define spectral model and SkyModel
+    spectral_model = PowerLawSpectralModel(index=3, amplitude="6e-12 cm-2 s-1 TeV-1", reference="1 TeV")
+    model = SkyModel(spatial_model=spatial_model, spectral_model=spectral_model, name="model1")
 
-# Create an in-memory observation
-location = observatory_locations["cta_south"]
-obs = Observation.create(
-    pointing=pointing, livetime=livetime, irfs=irfs, location=location
-)
+    # Set up IRFs for CTA dataset
+    irfs = load_irf_dict_from_file(
+        "$GAMMAPY_DATA/cta-1dc/caldb/data/cta/1dc/bcf/South_z20_50h/irf_file.fits"
+    )
+    livetime = 10.0 * u.hr
 
-# Make the MapDataset
-empty = MapDataset.create(geom, name="dataset-simu")
-maker = MapDatasetMaker(selection=["exposure", "background", "psf", "edisp"])
-maker_safe_mask = SafeMaskMaker(methods=["offset-max"], offset_max=2.0*u.deg)
-dataset = maker.run(empty, obs)
-dataset = maker_safe_mask.run(dataset, obs)
+    # Simulate an observation pointing at a fixed position in the sky.
+    pointing = FixedPointingInfo(
+        fixed_icrs=geom.center_skydir.icrs,
+    )
 
-# Add the model on the dataset and Poission fluctuate
-dataset.models = model
-dataset.fake(random_state=42)
+    # Create an in-memory observation
+    location = observatory_locations["cta_south"]
+    obs = Observation.create(
+        pointing=pointing, livetime=livetime, irfs=irfs, location=location
+    )
 
-# Save the energy dependent mock dataset
-dataset.write('dataset_energy_dependent.fits.gz', overwrite=True)
+    # Make the MapDataset
+    empty = MapDataset.create(geom, name="dataset-simu")
+    maker = MapDatasetMaker(selection=["exposure", "background", "psf", "edisp"])
+    maker_safe_mask = SafeMaskMaker(methods=["offset-max"], offset_max=4.0*u.deg)
+    dataset = maker.run(empty, obs)
+    dataset = maker_safe_mask.run(dataset, obs)
 
+    # Add the model on the dataset and Poission fluctuate
+    dataset.models = model
+    dataset.fake(random_state=42)
+
+    # Save the energy dependent mock dataset
+    dataset.write('dataset_energy_dependent.fits.gz', overwrite=True)
+
+if __name__ == '__main__':
+    energy_dependent_morphology()
