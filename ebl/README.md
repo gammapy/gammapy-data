@@ -6,7 +6,11 @@ Available models are:
    - Licence: Extragalactic optical-infrared background radiation, its time 
    evolution and the cosmic photon-photon opacity © 2008 by Alberto Franceschini -
    Padua University is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
- - Finke 2010 (http://adsabs.harvard.edu/abs/2009arXiv0905.1115F)
+ - Finke 2010
+   - Reference: [Finke, J., Razzaque, S., Dermer, C., Astrophys.J.712:238-249,2010](http://adsabs.harvard.edu/abs/2009arXiv0905.1115F)
+   - Licence: Model from publication "Modeling the Extragalactic Background Light from 
+   Stars and Dust" © 2024 by  Justin D. Finke, Soebur Razzaque, Charles D. Dermer is 
+   licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
  - Dominguez 2011:
    - Reference:  [Dominguez, A., et al., 2011MNRAS.410.2556D](https://ui.adsabs.harvard.edu/abs/2011MNRAS.410.2556D/abstract)
    - Licence: Extragalactic background light inferred from AEGIS galaxy-SED-type fractions 
