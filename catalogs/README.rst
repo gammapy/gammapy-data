@@ -12,3 +12,6 @@ The licences and references are:
       Collaboration is licensed under `CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`_.
 - 2HWC:
 - 3HWC:
+- HGPS:
+   - Reference: `H.E.S.S. Coll, A&A 612, A1 (2018) <https://www.aanda.org/articles/aa/full_html/2018/04/aa32098-17/aa32098-17.html>`_
+   - Licence: H.E.S.S. Galactic Plane catalogue © 2018 by the H.E.S.S. Collaboration is licensed under `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_.
