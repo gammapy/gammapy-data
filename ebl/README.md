@@ -4,8 +4,8 @@ Available models are:
  - Franceschini 2008:
    - Reference: [Franceschini, A.; Rodighiero, G.; Vaccari, M., 2008A&A...487..837F](http://adsabs.harvard.edu/abs/2008A%26A...487..837F)
    - Licence: Extragalactic optical-infrared background radiation, its time 
-   evolution and the cosmic photon-photon opacity © 2008 by Alberto Franceschini -
-   Padua University is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+   evolution and the cosmic photon-photon opacity © 2008 by Alberto Franceschini, Giulia Rodighiero and 
+   Marco Vaccari  - Padua University is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
  - Finke 2010
    - Reference: [Finke, J., Razzaque, S., Dermer, C., Astrophys.J.712:238-249,2010](http://adsabs.harvard.edu/abs/2009arXiv0905.1115F)
    - Licence: Model from publication "Modeling the Extragalactic Background Light from 
@@ -18,14 +18,14 @@ Available models are:
  - Franceschini 2017
    - Reference: [Franceschini, A., Rodighiero, G. 2017A&A...603A..34F](https://ui.adsabs.harvard.edu/abs/2017A%26A...603A..34F)
    - Licence: Extragalactic optical-infrared background radiation, its time 
-   evolution and the cosmic photon-photon opacity © 2017 by Alberto Franceschini -
-   Padua University is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+   evolution and the cosmic photon-photon opacity © 2017 by Alberto Franceschini and Giulia 
+   Rodighiero - Padua University is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
  - Saldana-Lopez 2021:
    - References: [Saldana-Lopez, A., et al. 2021MNRAS.507.5144S](https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.5144S),
    [Dominguez, A., et al., 2024MNRAS.527.4632D](https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.4632D/abstract)
    - Licence: An observational determination of the evolving extragalactic background light 
    from the multiwavelength HST/CANDELS survey in the Fermi and CTA era © 2021 by Alberto 
-   Saldana-Lopez is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+   Saldana-Lopez et al. is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ![alt tag](./ebl_models.png)
 
