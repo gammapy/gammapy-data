@@ -1,0 +1,28 @@
+general:
+    log: {level: info, filename: null, filemode: null, format: null, datefmt: null}
+    outdir: .
+observations:
+    datastore: $GAMMAPY_DATA/hess-dl3-dr1/
+    obs_ids: [47802, 47803, 47804, 47827, 47828, 47829]
+datasets:
+    type: 1d
+    stack: true
+    geom:
+        wcs:
+            skydir: {frame: null, lon: null, lat: null}
+            binsize: 0.02 deg
+            width: {width: 5.0 deg, height: 5.0 deg}
+            binsize_irf: 0.2 deg
+        selection: {offset_max: 2.3 deg}
+        axes:
+            energy: {min: 0.2 TeV, max: 20.0 TeV, nbins: 10}
+            energy_true: {min: 0.1 TeV, max: 30.0 TeV, nbins: 25}
+    on_region: {frame: icrs, lon: 329.72 deg, lat: -30.22 deg, radius: 0.11 deg}
+    background:
+        method: reflected
+        exclusion: null
+        parameters: {}
+    safe_mask:
+        methods: [aeff-default, offset-max]
+        parameters: {aeff_percent: 0.1, offset_max: 2.3 deg}
+    containment_correction: true
