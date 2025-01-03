@@ -1,0 +1,1108 @@
+2024-12-28 16:19:09 INFO    GTAnalysis.__init__(): 
+--------------------------------------------------------------------------------
+fermipy version 1.3.1+6.g74aa 
+ScienceTools version 2.2.0
+2024-12-28 16:19:09 DEBUG   GTAnalysis.print_config(): Configuration:
+binning:
+  binsperdec: 5.0
+  binsz: 0.2
+  coordsys: GAL
+  enumbins: null
+  hpx_ebin: true
+  hpx_order: 10
+  hpx_ordering_scheme: RING
+  npix: null
+  proj: CAR
+  projtype: WCS
+  roiwidth: 2.0
+components:
+- model:
+    isodiff: /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF0_v1.txt
+  selection:
+    evtype: 4
+- model:
+    isodiff: /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF1_v1.txt
+  selection:
+    evtype: 8
+- model:
+    isodiff: /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF2_v1.txt
+  selection:
+    evtype: 16
+- model:
+    isodiff: /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF3_v1.txt
+  selection:
+    evtype: 32
+curvature:
+  Index2: 0.6667
+  free_Index2: false
+data:
+  cacheft1: true
+  evfile: /Users/qremy/Work/Data/fermi/crab/raw/events_list.lst
+  ltcube: null
+  scfile: /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+extension:
+  fit_ebin: false
+  fit_position: false
+  fix_shape: false
+  free_background: false
+  free_radius: null
+  make_plots: false
+  make_tsmap: true
+  psf_scale_fn: null
+  reoptimize: false
+  save_model_map: false
+  spatial_model: RadialGaussian
+  sqrt_ts_threshold: null
+  tsmap_fitter: tsmap
+  update: false
+  width: []
+  width_max: 1.0
+  width_min: 0.01
+  width_nstep: 21
+  write_fits: true
+  write_npy: true
+fileio:
+  logfile: out.log
+  outdir: ''
+  outdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$|\.png$|\.pdf$|\.yaml$
+  savefits: true
+  scratchdir: /scratch
+  usescratch: false
+  workdir: null
+  workdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$
+gtlike:
+  bexpmap: null
+  bexpmap_base: null
+  bexpmap_roi: null
+  bexpmap_roi_base: null
+  convolve: true
+  edisp: true
+  edisp_bins: 0
+  edisp_disable:
+  - isodiff
+  expscale: null
+  irfs: P8R3_SOURCEVETO_V3
+  llscan_npts: 20
+  minbinsz: 0.05
+  resample: true
+  rfactor: 2
+  src_expscale: {}
+  srcmap: null
+  srcmap_base: null
+  use_external_srcmap: false
+  use_scaled_srcmap: false
+  wmap: null
+lightcurve:
+  binsz: 86400.0
+  free_background: false
+  free_params: []
+  free_radius: null
+  free_sources: []
+  make_plots: false
+  max_free_sources: 5
+  multithread: false
+  nbins: null
+  nthread: null
+  outdir: null
+  save_bin_data: true
+  shape_ts_threshold: 16.0
+  systematic: 0.02
+  time_bins: []
+  use_local_ltcube: true
+  use_scaled_srcmap: false
+  write_fits: true
+  write_npy: true
+localize:
+  dtheta_max: 0.5
+  fix_shape: false
+  free_background: false
+  free_radius: null
+  make_plots: false
+  nstep: 5
+  tsmap_fitter: tsmap
+  update: true
+  write_fits: true
+  write_npy: true
+logging:
+  chatter: 3
+  prefix: ''
+  verbosity: 3
+ltcube:
+  binsz: 1.0
+  dcostheta: 0.025
+  phibins: 0
+  use_local_ltcube: false
+mc:
+  seed: null
+model:
+  assoc_xmatch_columns:
+  - 3FGL_Name
+  catalogs:
+  - /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/gll_psc_v32.fit
+  diffuse: []
+  diffuse_dir: []
+  diffuse_xml: []
+  extdir: /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/Extended_14years
+  extract_diffuse: false
+  galdiff:
+  - /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits
+  isodiff: []
+  limbdiff: []
+  merge_sources: true
+  sources: []
+  src_radius: null
+  src_radius_roi: null
+  src_roiwidth: 2.0
+optimizer:
+  init_lambda: 0.0001
+  max_iter: 100
+  min_fit_quality: 2
+  optimizer: MINUIT
+  retries: 3
+  tol: 0.001
+  verbosity: 0
+plotting:
+  catalogs: []
+  cmap: magma
+  cmap_resid: RdBu_r
+  figsize:
+  - 8.0
+  - 6.0
+  format: png
+  graticule_radii: []
+  interactive: false
+  label_ts_threshold: 0.0
+  loge_bounds: []
+psmap:
+  chatter: 1
+  cmap: ''
+  dpix: -1
+  emax: 1000000.0
+  emin: 100.0
+  fixedradius: -1.0
+  ipix: -1
+  jpix: -1
+  make_plots: false
+  maxpoissoncount: 100.0
+  mmap: ''
+  nbinloge: 20
+  nbinpdf: 50
+  outfile: ''
+  prob_epsilon: 1.0e-07
+  psfpar0: 4.0
+  psfpar0lst: ''
+  psfpar1: 100.0
+  psfpar2: 0.9
+  psfpar3: 0.1
+  scaleaxis: 20.0
+  wmap: ''
+  write_fits: true
+residmap:
+  exclude: []
+  loge_bounds: []
+  make_plots: false
+  model: {}
+  use_weights: false
+  write_fits: true
+  write_npy: true
+roiopt:
+  max_free_sources: 5
+  npred_frac: 0.95
+  npred_threshold: 1.0
+  shape_ts_threshold: 25.0
+  skip: []
+sed:
+  bin_index: 2.0
+  cov_scale: 3.0
+  free_background: false
+  free_pars: []
+  free_radius: null
+  make_plots: false
+  ul_confidence: 0.95
+  ul_ts_threshold: 4.0
+  use_local_index: false
+  write_fits: true
+  write_npy: true
+selection:
+  convtype: null
+  dec: null
+  emax: 2511886.4315095823
+  emin: 398107.1705534969
+  evclass: 2048
+  evtype: null
+  filter: DATA_QUAL>0 && LAT_CONFIG==1
+  glat: -5.783339352016454
+  glon: 184.55465500348814
+  logemax: null
+  logemin: null
+  phasemax: null
+  phasemin: null
+  ra: null
+  radius: null
+  roicut: 'no'
+  target: null
+  tmax: 752112005
+  tmin: 239557417
+  zmax: 105.0
+sourcefind:
+  free_params: []
+  max_iter: 5
+  min_separation: 1.0
+  model: {}
+  multithread: false
+  nthread: null
+  sources_per_iter: 4
+  sqrt_ts_threshold: 5.0
+  tsmap_fitter: tsmap
+tscube:
+  cov_scale: -1.0
+  cov_scale_bb: -1.0
+  do_sed: true
+  exclude: []
+  init_lambda: 0.0
+  max_iter: 30
+  model: {}
+  nnorm: 10
+  norm_sigma: 5.0
+  remake_test_source: false
+  st_scan_level: 0
+  tol: 0.001
+  tol_type: 0
+tsmap:
+  exclude: []
+  loge_bounds: []
+  make_plots: false
+  max_kernel_radius: 3.0
+  model: {}
+  multithread: false
+  nthread: null
+  write_fits: true
+  write_npy: true
+
+2024-12-28 16:19:10 DEBUG   GTAnalysis._create_component(): Creating Analysis Component: 00
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.__init__(): Automatically setting selection radius to 1.9142135623730951 deg
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.print_config(): Configuration:
+binning:
+  binsperdec: 5.0
+  binsz: 0.2
+  coordsys: GAL
+  enumbins: null
+  hpx_ebin: true
+  hpx_order: 10
+  hpx_ordering_scheme: RING
+  npix: null
+  proj: CAR
+  projtype: WCS
+  roiwidth: 2.0
+data:
+  cacheft1: true
+  evfile: /Users/qremy/Work/Data/fermi/crab/raw/events_list.lst
+  ltcube: null
+  scfile: /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+file_suffix: _00
+fileio:
+  logfile: out.log
+  outdir: ''
+  outdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$|\.png$|\.pdf$|\.yaml$
+  savefits: true
+  scratchdir: /scratch
+  usescratch: false
+  workdir: /Users/qremy/Work/Data/fermi/crab/reduced/
+  workdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$
+gtlike:
+  bexpmap: null
+  bexpmap_base: null
+  bexpmap_roi: null
+  bexpmap_roi_base: null
+  convolve: true
+  edisp: true
+  edisp_bins: 0
+  edisp_disable:
+  - isodiff
+  expscale: null
+  irfs: P8R3_SOURCEVETO_V3
+  llscan_npts: 20
+  minbinsz: 0.05
+  resample: true
+  rfactor: 2
+  src_expscale: {}
+  srcmap: null
+  srcmap_base: null
+  use_external_srcmap: false
+  use_scaled_srcmap: false
+  wmap: null
+logging:
+  chatter: 3
+  prefix: ''
+  verbosity: 3
+ltcube:
+  binsz: 1.0
+  dcostheta: 0.025
+  phibins: 0
+  use_local_ltcube: false
+model:
+  assoc_xmatch_columns:
+  - 3FGL_Name
+  catalogs:
+  - /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/gll_psc_v32.fit
+  diffuse: []
+  diffuse_dir: []
+  diffuse_xml: []
+  extdir: /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/Extended_14years
+  extract_diffuse: false
+  galdiff:
+  - /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits
+  isodiff:
+  - /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF0_v1.txt
+  limbdiff: []
+  merge_sources: true
+  sources: []
+  src_radius: null
+  src_radius_roi: null
+  src_roiwidth: 2.0
+name: '00'
+selection:
+  convtype: null
+  dec: null
+  emax: 2511886.4315095823
+  emin: 398107.1705534969
+  evclass: 2048
+  evtype: 4
+  filter: DATA_QUAL>0 && LAT_CONFIG==1
+  glat: -5.783339352016454
+  glon: 184.55465500348814
+  logemax: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    mpmZmZmZGUA=
+  logemin: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ZmZmZmZmFkA=
+  phasemax: null
+  phasemin: null
+  ra: null
+  radius: 1.9142135623730951
+  roicut: 'no'
+  target: null
+  tmax: 752112005
+  tmin: 239557417
+  zmax: 105.0
+
+2024-12-28 16:19:10 DEBUG   GTAnalysis._create_component(): Creating Analysis Component: 01
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.__init__(): Automatically setting selection radius to 1.9142135623730951 deg
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.print_config(): Configuration:
+binning:
+  binsperdec: 5.0
+  binsz: 0.2
+  coordsys: GAL
+  enumbins: null
+  hpx_ebin: true
+  hpx_order: 10
+  hpx_ordering_scheme: RING
+  npix: null
+  proj: CAR
+  projtype: WCS
+  roiwidth: 2.0
+data:
+  cacheft1: true
+  evfile: /Users/qremy/Work/Data/fermi/crab/raw/events_list.lst
+  ltcube: null
+  scfile: /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+file_suffix: _01
+fileio:
+  logfile: out.log
+  outdir: ''
+  outdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$|\.png$|\.pdf$|\.yaml$
+  savefits: true
+  scratchdir: /scratch
+  usescratch: false
+  workdir: /Users/qremy/Work/Data/fermi/crab/reduced/
+  workdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$
+gtlike:
+  bexpmap: null
+  bexpmap_base: null
+  bexpmap_roi: null
+  bexpmap_roi_base: null
+  convolve: true
+  edisp: true
+  edisp_bins: 0
+  edisp_disable:
+  - isodiff
+  expscale: null
+  irfs: P8R3_SOURCEVETO_V3
+  llscan_npts: 20
+  minbinsz: 0.05
+  resample: true
+  rfactor: 2
+  src_expscale: {}
+  srcmap: null
+  srcmap_base: null
+  use_external_srcmap: false
+  use_scaled_srcmap: false
+  wmap: null
+logging:
+  chatter: 3
+  prefix: ''
+  verbosity: 3
+ltcube:
+  binsz: 1.0
+  dcostheta: 0.025
+  phibins: 0
+  use_local_ltcube: false
+model:
+  assoc_xmatch_columns:
+  - 3FGL_Name
+  catalogs:
+  - /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/gll_psc_v32.fit
+  diffuse: []
+  diffuse_dir: []
+  diffuse_xml: []
+  extdir: /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/Extended_14years
+  extract_diffuse: false
+  galdiff:
+  - /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits
+  isodiff:
+  - /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF1_v1.txt
+  limbdiff: []
+  merge_sources: true
+  sources: []
+  src_radius: null
+  src_radius_roi: null
+  src_roiwidth: 2.0
+name: '01'
+selection:
+  convtype: null
+  dec: null
+  emax: 2511886.4315095823
+  emin: 398107.1705534969
+  evclass: 2048
+  evtype: 8
+  filter: DATA_QUAL>0 && LAT_CONFIG==1
+  glat: -5.783339352016454
+  glon: 184.55465500348814
+  logemax: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    mpmZmZmZGUA=
+  logemin: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ZmZmZmZmFkA=
+  phasemax: null
+  phasemin: null
+  ra: null
+  radius: 1.9142135623730951
+  roicut: 'no'
+  target: null
+  tmax: 752112005
+  tmin: 239557417
+  zmax: 105.0
+
+2024-12-28 16:19:10 DEBUG   GTAnalysis._create_component(): Creating Analysis Component: 02
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.__init__(): Automatically setting selection radius to 1.9142135623730951 deg
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.print_config(): Configuration:
+binning:
+  binsperdec: 5.0
+  binsz: 0.2
+  coordsys: GAL
+  enumbins: null
+  hpx_ebin: true
+  hpx_order: 10
+  hpx_ordering_scheme: RING
+  npix: null
+  proj: CAR
+  projtype: WCS
+  roiwidth: 2.0
+data:
+  cacheft1: true
+  evfile: /Users/qremy/Work/Data/fermi/crab/raw/events_list.lst
+  ltcube: null
+  scfile: /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+file_suffix: _02
+fileio:
+  logfile: out.log
+  outdir: ''
+  outdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$|\.png$|\.pdf$|\.yaml$
+  savefits: true
+  scratchdir: /scratch
+  usescratch: false
+  workdir: /Users/qremy/Work/Data/fermi/crab/reduced/
+  workdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$
+gtlike:
+  bexpmap: null
+  bexpmap_base: null
+  bexpmap_roi: null
+  bexpmap_roi_base: null
+  convolve: true
+  edisp: true
+  edisp_bins: 0
+  edisp_disable:
+  - isodiff
+  expscale: null
+  irfs: P8R3_SOURCEVETO_V3
+  llscan_npts: 20
+  minbinsz: 0.05
+  resample: true
+  rfactor: 2
+  src_expscale: {}
+  srcmap: null
+  srcmap_base: null
+  use_external_srcmap: false
+  use_scaled_srcmap: false
+  wmap: null
+logging:
+  chatter: 3
+  prefix: ''
+  verbosity: 3
+ltcube:
+  binsz: 1.0
+  dcostheta: 0.025
+  phibins: 0
+  use_local_ltcube: false
+model:
+  assoc_xmatch_columns:
+  - 3FGL_Name
+  catalogs:
+  - /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/gll_psc_v32.fit
+  diffuse: []
+  diffuse_dir: []
+  diffuse_xml: []
+  extdir: /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/Extended_14years
+  extract_diffuse: false
+  galdiff:
+  - /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits
+  isodiff:
+  - /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF2_v1.txt
+  limbdiff: []
+  merge_sources: true
+  sources: []
+  src_radius: null
+  src_radius_roi: null
+  src_roiwidth: 2.0
+name: '02'
+selection:
+  convtype: null
+  dec: null
+  emax: 2511886.4315095823
+  emin: 398107.1705534969
+  evclass: 2048
+  evtype: 16
+  filter: DATA_QUAL>0 && LAT_CONFIG==1
+  glat: -5.783339352016454
+  glon: 184.55465500348814
+  logemax: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    mpmZmZmZGUA=
+  logemin: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ZmZmZmZmFkA=
+  phasemax: null
+  phasemin: null
+  ra: null
+  radius: 1.9142135623730951
+  roicut: 'no'
+  target: null
+  tmax: 752112005
+  tmin: 239557417
+  zmax: 105.0
+
+2024-12-28 16:19:10 DEBUG   GTAnalysis._create_component(): Creating Analysis Component: 03
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.__init__(): Automatically setting selection radius to 1.9142135623730951 deg
+2024-12-28 16:19:10 DEBUG   GTBinnedAnalysis.print_config(): Configuration:
+binning:
+  binsperdec: 5.0
+  binsz: 0.2
+  coordsys: GAL
+  enumbins: null
+  hpx_ebin: true
+  hpx_order: 10
+  hpx_ordering_scheme: RING
+  npix: null
+  proj: CAR
+  projtype: WCS
+  roiwidth: 2.0
+data:
+  cacheft1: true
+  evfile: /Users/qremy/Work/Data/fermi/crab/raw/events_list.lst
+  ltcube: null
+  scfile: /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+file_suffix: _03
+fileio:
+  logfile: out.log
+  outdir: ''
+  outdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$|\.png$|\.pdf$|\.yaml$
+  savefits: true
+  scratchdir: /scratch
+  usescratch: false
+  workdir: /Users/qremy/Work/Data/fermi/crab/reduced/
+  workdir_regex:
+  - \.fits$|\.fit$|\.xml$|\.npy$
+gtlike:
+  bexpmap: null
+  bexpmap_base: null
+  bexpmap_roi: null
+  bexpmap_roi_base: null
+  convolve: true
+  edisp: true
+  edisp_bins: 0
+  edisp_disable:
+  - isodiff
+  expscale: null
+  irfs: P8R3_SOURCEVETO_V3
+  llscan_npts: 20
+  minbinsz: 0.05
+  resample: true
+  rfactor: 2
+  src_expscale: {}
+  srcmap: null
+  srcmap_base: null
+  use_external_srcmap: false
+  use_scaled_srcmap: false
+  wmap: null
+logging:
+  chatter: 3
+  prefix: ''
+  verbosity: 3
+ltcube:
+  binsz: 1.0
+  dcostheta: 0.025
+  phibins: 0
+  use_local_ltcube: false
+model:
+  assoc_xmatch_columns:
+  - 3FGL_Name
+  catalogs:
+  - /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/gll_psc_v32.fit
+  diffuse: []
+  diffuse_dir: []
+  diffuse_xml: []
+  extdir: /Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/Extended_14years
+  extract_diffuse: false
+  galdiff:
+  - /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits
+  isodiff:
+  - /Users/qremy/Work/Data/fermi/iso/iso_P8R3_SOURCEVETO_V3_PSF3_v1.txt
+  limbdiff: []
+  merge_sources: true
+  sources: []
+  src_radius: null
+  src_radius_roi: null
+  src_roiwidth: 2.0
+name: '03'
+selection:
+  convtype: null
+  dec: null
+  emax: 2511886.4315095823
+  emin: 398107.1705534969
+  evclass: 2048
+  evtype: 32
+  filter: DATA_QUAL>0 && LAT_CONFIG==1
+  glat: -5.783339352016454
+  glon: 184.55465500348814
+  logemax: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    mpmZmZmZGUA=
+  logemin: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ZmZmZmZmFkA=
+  phasemax: null
+  phasemin: null
+  ra: null
+  radius: 1.9142135623730951
+  roicut: 'no'
+  target: null
+  tmax: 752112005
+  tmin: 239557417
+  zmax: 105.0
+
+2024-12-28 16:19:10 INFO    GTAnalysis.setup(): Running setup.
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.setup(): Running setup for component 00
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): Running gtselect.
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtselect infile=/Users/qremy/Work/Data/fermi/crab/reduced/evfile_00.txt outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_00.fits ra=83.6324 dec=22.01740000000001 rad=1.9142135623730951 tmin=239557417.0 tmax=752112005.0 emin=398107.1705534969 emax=2511886.4315095823 zmin=0.0 zmax=105.0 evclass=2048 evtype=4 convtype=-1 phasemin=0.0 phasemax=1.0 evtable="EVENTS" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): This is gtselect version HEAD
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): WARNING:
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): Over writing existing event class selection,
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,128,P8R3)
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): with
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,2048,P8R3)
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): Applying filter string: ((EVENT_CLASS&o4000) != o0) && angsep(RA,DEC,83.6324,22.0174) < 1 && ((EVENT_TYPE&o4) != o0) && 398107.17055349692237 < ENERGY && ENERGY <= 2511886.4315095823258 && 239557417 < TIME && TIME <= 752112005 && 0 < ZENITH_ANGLE && ZENITH_ANGLE <= 105 && gtifilter()
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): Done.
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtselect. Execution time: 0.42 s
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): Running gtmktime.
+2024-12-28 16:19:10 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtmktime scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" filter="DATA_QUAL>0 && LAT_CONFIG==1" roicut=no evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_00.fits evtable="EVENTS" outfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_filtered_00.fits" apply_filter=yes overwrite=no header_obstimes=yes tstart=0.0 tstop=0.0 gtifile="default" chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 16:26:03 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtmktime. Execution time: 412.53 s
+2024-12-28 16:26:03 INFO    GTBinnedAnalysis.run_gtapp(): Running gtltcube.
+2024-12-28 16:26:03 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtltcube evfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_00.fits" evtable="EVENTS" scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits dcostheta=0.025 binsz=1.0 phibins=0 tmin=0.0 tmax=0.0 file_version="1" zmin=0.0 zmax=105.0 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 16:26:03 INFO    GTBinnedAnalysis.run_gtapp(): Working on file /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+2024-12-28 18:34:45 INFO    GTBinnedAnalysis.run_gtapp(): .....................!
+2024-12-28 18:34:45 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtltcube. Execution time: 7722.42 s
+2024-12-28 18:34:45 DEBUG   GTBinnedAnalysis.setup(): Loading LT Cube /Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits
+2024-12-28 18:34:45 DEBUG   GTBinnedAnalysis.setup(): Creating PSF model
+2024-12-28 18:34:45 INFO    GTBinnedAnalysis.run_gtapp(): Running gtbin.
+2024-12-28 18:34:45 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtbin evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_00.fits scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_00.fits algorithm="ccube" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile=NONE tbinalg="LIN" tbinfile=NONE nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 rafield="RA" decfield="DEC" proj="CAR" hpx_ordering_scheme="RING" hpx_order=3 hpx_ebin=yes hpx_region="" evtable="EVENTS" sctable="SC_DATA" efield="ENERGY" tfield="TIME" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 18:34:45 INFO    GTBinnedAnalysis.run_gtapp(): This is gtbin version HEAD
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtbin. Execution time: 4.43 s
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_00.fits irfs="P8R3_SOURCEVETO_V3" evtype=4 edisp_bins=0 nxpix=360 nypix=180 binsz=1.0 coordsys="GAL" xref=0.0 yref=0.0 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  2
+2024-12-28 18:34:50 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.72 s
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_roi_00.fits irfs="P8R3_SOURCEVETO_V3" evtype=4 edisp_bins=0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  2
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.33 s
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): Running gtsrcmaps.
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtsrcmaps scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_00.fits srcmdl=/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_00.xml bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_00.fits wmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_00.fits irfs="P8R3_SOURCEVETO_V3" evtype=4 convol=yes resample=yes rfactor=2 minbinsz=0.05 ptsrc=yes psfcorr=yes emapbnds=no edisp_bins=0 copyall=no chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): This is gtsrcmaps version HEAD
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 18:34:51 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  2
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201s
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201i
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2200
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named isodiff
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named galdiff
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2200 5....................!
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201i 5....................!
+2024-12-28 18:34:52 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201s 5....................!
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for galdiff 5....................!
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for isodiff 5....................!
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): ProjMap: extrapolated beyond the maximum energy for map cube file /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits 15624 times.
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtsrcmaps. Execution time: 3.88 s
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.setup(): Finished setup for component 00
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.setup(): Running setup for component 01
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Running gtselect.
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtselect infile=/Users/qremy/Work/Data/fermi/crab/reduced/evfile_01.txt outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_01.fits ra=83.6324 dec=22.01740000000001 rad=1.9142135623730951 tmin=239557417.0 tmax=752112005.0 emin=398107.1705534969 emax=2511886.4315095823 zmin=0.0 zmax=105.0 evclass=2048 evtype=8 convtype=-1 phasemin=0.0 phasemax=1.0 evtable="EVENTS" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): This is gtselect version HEAD
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): WARNING:
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Over writing existing event class selection,
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,128,P8R3)
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): with
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,2048,P8R3)
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Applying filter string: ((EVENT_CLASS&o4000) != o0) && angsep(RA,DEC,83.6324,22.0174) < 1 && ((EVENT_TYPE&o10) != o0) && 398107.17055349692237 < ENERGY && ENERGY <= 2511886.4315095823258 && 239557417 < TIME && TIME <= 752112005 && 0 < ZENITH_ANGLE && ZENITH_ANGLE <= 105 && gtifilter()
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Done.
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtselect. Execution time: 0.43 s
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): Running gtmktime.
+2024-12-28 18:34:55 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtmktime scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" filter="DATA_QUAL>0 && LAT_CONFIG==1" roicut=no evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_01.fits evtable="EVENTS" outfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_filtered_01.fits" apply_filter=yes overwrite=no header_obstimes=yes tstart=0.0 tstop=0.0 gtifile="default" chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 18:41:58 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtmktime. Execution time: 422.27 s
+2024-12-28 18:41:58 INFO    GTBinnedAnalysis.run_gtapp(): Running gtltcube.
+2024-12-28 18:41:58 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtltcube evfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_01.fits" evtable="EVENTS" scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits dcostheta=0.025 binsz=1.0 phibins=0 tmin=0.0 tmax=0.0 file_version="1" zmin=0.0 zmax=105.0 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 18:41:58 INFO    GTBinnedAnalysis.run_gtapp(): Working on file /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+2024-12-28 20:52:27 INFO    GTBinnedAnalysis.run_gtapp(): .....................!
+2024-12-28 20:52:27 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtltcube. Execution time: 7829.59 s
+2024-12-28 20:52:27 DEBUG   GTBinnedAnalysis.setup(): Loading LT Cube /Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits
+2024-12-28 20:52:27 DEBUG   GTBinnedAnalysis.setup(): Creating PSF model
+2024-12-28 20:52:28 INFO    GTBinnedAnalysis.run_gtapp(): Running gtbin.
+2024-12-28 20:52:28 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtbin evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_01.fits scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_01.fits algorithm="ccube" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 denergy=0.0 ebinfile=NONE tbinalg="LIN" tstart=0.0 tstop=0.0 dtime=0.0 tbinfile=NONE snratio=0.0 lcemin=0.0 lcemax=0.0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 rafield="RA" decfield="DEC" proj="CAR" hpx_ordering_scheme="RING" hpx_order=3 hpx_ebin=yes hpx_region="" evtable="EVENTS" sctable="SC_DATA" efield="ENERGY" tfield="TIME" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 20:52:28 INFO    GTBinnedAnalysis.run_gtapp(): This is gtbin version HEAD
+2024-12-28 20:52:32 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtbin. Execution time: 4.59 s
+2024-12-28 20:52:32 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-28 20:52:32 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_01.fits irfs="P8R3_SOURCEVETO_V3" evtype=8 edisp_bins=0 nxpix=360 nypix=180 binsz=1.0 coordsys="GAL" xref=0.0 yref=0.0 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-28 20:52:32 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-28 20:52:32 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 20:52:32 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  3
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.72 s
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_roi_01.fits irfs="P8R3_SOURCEVETO_V3" evtype=8 edisp_bins=0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  3
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.33 s
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): Running gtsrcmaps.
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtsrcmaps scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_01.fits srcmdl=/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_01.xml bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_01.fits wmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_01.fits irfs="P8R3_SOURCEVETO_V3" evtype=8 convol=yes resample=yes rfactor=2 minbinsz=0.05 ptsrc=yes psfcorr=yes emapbnds=no edisp_bins=0 copyall=no chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): This is gtsrcmaps version HEAD
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 20:52:33 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  3
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201s
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201i
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2200
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named isodiff
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named galdiff
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2200 5....................!
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201i 5....................!
+2024-12-28 20:52:34 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201s 5....................!
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for galdiff 5....................!
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for isodiff 5....................!
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): ProjMap: extrapolated beyond the maximum energy for map cube file /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits 6372 times.
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtsrcmaps. Execution time: 3.63 s
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.setup(): Finished setup for component 01
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.setup(): Running setup for component 02
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Running gtselect.
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtselect infile=/Users/qremy/Work/Data/fermi/crab/reduced/evfile_02.txt outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_02.fits ra=83.6324 dec=22.01740000000001 rad=1.9142135623730951 tmin=239557417.0 tmax=752112005.0 emin=398107.1705534969 emax=2511886.4315095823 zmin=0.0 zmax=105.0 evclass=2048 evtype=16 convtype=-1 phasemin=0.0 phasemax=1.0 evtable="EVENTS" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): This is gtselect version HEAD
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): WARNING:
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Over writing existing event class selection,
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,128,P8R3)
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): with
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,2048,P8R3)
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Applying filter string: ((EVENT_CLASS&o4000) != o0) && angsep(RA,DEC,83.6324,22.0174) < 1 && ((EVENT_TYPE&o20) != o0) && 398107.17055349692237 < ENERGY && ENERGY <= 2511886.4315095823258 && 239557417 < TIME && TIME <= 752112005 && 0 < ZENITH_ANGLE && ZENITH_ANGLE <= 105 && gtifilter()
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Done.
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtselect. Execution time: 0.43 s
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): Running gtmktime.
+2024-12-28 20:52:37 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtmktime scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" filter="DATA_QUAL>0 && LAT_CONFIG==1" roicut=no evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_02.fits evtable="EVENTS" outfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_filtered_02.fits" apply_filter=yes overwrite=no header_obstimes=yes tstart=0.0 tstop=0.0 gtifile="default" chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 20:59:33 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtmktime. Execution time: 415.97 s
+2024-12-28 20:59:33 INFO    GTBinnedAnalysis.run_gtapp(): Running gtltcube.
+2024-12-28 20:59:33 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtltcube evfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_02.fits" evtable="EVENTS" scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits dcostheta=0.025 binsz=1.0 phibins=0 tmin=0.0 tmax=0.0 file_version="1" zmin=0.0 zmax=105.0 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 20:59:34 INFO    GTBinnedAnalysis.run_gtapp(): Working on file /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+2024-12-28 23:07:46 INFO    GTBinnedAnalysis.run_gtapp(): .....................!
+2024-12-28 23:07:46 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtltcube. Execution time: 7692.54 s
+2024-12-28 23:07:46 DEBUG   GTBinnedAnalysis.setup(): Loading LT Cube /Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits
+2024-12-28 23:07:46 DEBUG   GTBinnedAnalysis.setup(): Creating PSF model
+2024-12-28 23:07:46 INFO    GTBinnedAnalysis.run_gtapp(): Running gtbin.
+2024-12-28 23:07:46 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtbin evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_02.fits scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_02.fits algorithm="ccube" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 denergy=0.0 ebinfile=NONE tbinalg="LIN" tstart=0.0 tstop=0.0 dtime=0.0 tbinfile=NONE snratio=0.0 lcemin=0.0 lcemax=0.0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 rafield="RA" decfield="DEC" proj="CAR" hpx_ordering_scheme="RING" hpx_order=3 hpx_ebin=yes hpx_region="" evtable="EVENTS" sctable="SC_DATA" efield="ENERGY" tfield="TIME" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 23:07:46 INFO    GTBinnedAnalysis.run_gtapp(): This is gtbin version HEAD
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtbin. Execution time: 4.46 s
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_02.fits irfs="P8R3_SOURCEVETO_V3" evtype=16 edisp_bins=0 nxpix=360 nypix=180 binsz=1.0 coordsys="GAL" xref=0.0 yref=0.0 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  4
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.79 s
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_roi_02.fits irfs="P8R3_SOURCEVETO_V3" evtype=16 edisp_bins=0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 23:07:51 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  4
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.34 s
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Running gtsrcmaps.
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtsrcmaps scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_02.fits srcmdl=/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_02.xml bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_02.fits wmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_02.fits irfs="P8R3_SOURCEVETO_V3" evtype=16 convol=yes resample=yes rfactor=2 minbinsz=0.05 ptsrc=yes psfcorr=yes emapbnds=no edisp_bins=0 copyall=no chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): This is gtsrcmaps version HEAD
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  4
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201s
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201i
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2200
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named isodiff
+2024-12-28 23:07:52 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named galdiff
+2024-12-28 23:07:53 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2200 5....................!
+2024-12-28 23:07:53 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201i 5....................!
+2024-12-28 23:07:53 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201s 5....................!
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for galdiff 5....................!
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for isodiff 5....................!
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): ProjMap: extrapolated beyond the maximum energy for map cube file /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits 5808 times.
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtsrcmaps. Execution time: 3.55 s
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.setup(): Finished setup for component 02
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.setup(): Running setup for component 03
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): Running gtselect.
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtselect infile=/Users/qremy/Work/Data/fermi/crab/reduced/evfile_03.txt outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_03.fits ra=83.6324 dec=22.01740000000001 rad=1.9142135623730951 tmin=239557417.0 tmax=752112005.0 emin=398107.1705534969 emax=2511886.4315095823 zmin=0.0 zmax=105.0 evclass=2048 evtype=32 convtype=-1 phasemin=0.0 phasemax=1.0 evtable="EVENTS" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): This is gtselect version HEAD
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): WARNING:
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): Over writing existing event class selection,
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,128,P8R3)
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): with
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): BIT_MASK(EVENT_CLASS,2048,P8R3)
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): 
+2024-12-28 23:07:55 INFO    GTBinnedAnalysis.run_gtapp(): Applying filter string: ((EVENT_CLASS&o4000) != o0) && angsep(RA,DEC,83.6324,22.0174) < 1 && ((EVENT_TYPE&o40) != o0) && 398107.17055349692237 < ENERGY && ENERGY <= 2511886.4315095823258 && 239557417 < TIME && TIME <= 752112005 && 0 < ZENITH_ANGLE && ZENITH_ANGLE <= 105 && gtifilter()
+2024-12-28 23:07:56 INFO    GTBinnedAnalysis.run_gtapp(): Done.
+2024-12-28 23:07:56 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtselect. Execution time: 0.43 s
+2024-12-28 23:07:56 INFO    GTBinnedAnalysis.run_gtapp(): Running gtmktime.
+2024-12-28 23:07:56 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtmktime scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" filter="DATA_QUAL>0 && LAT_CONFIG==1" roicut=no evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_03.fits evtable="EVENTS" outfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_filtered_03.fits" apply_filter=yes overwrite=no header_obstimes=yes tstart=0.0 tstop=0.0 gtifile="default" chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 23:15:04 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtmktime. Execution time: 428.80 s
+2024-12-28 23:15:05 INFO    GTBinnedAnalysis.run_gtapp(): Running gtltcube.
+2024-12-28 23:15:05 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtltcube evfile="/Users/qremy/Work/Data/fermi/crab/reduced/ft1_03.fits" evtable="EVENTS" scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits dcostheta=0.025 binsz=1.0 phibins=0 tmin=0.0 tmax=0.0 file_version="1" zmin=0.0 zmax=105.0 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-28 23:15:05 INFO    GTBinnedAnalysis.run_gtapp(): Working on file /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+2024-12-29 01:23:14 INFO    GTBinnedAnalysis.run_gtapp(): .....................!
+2024-12-29 01:23:14 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtltcube. Execution time: 7689.33 s
+2024-12-29 01:23:14 DEBUG   GTBinnedAnalysis.setup(): Loading LT Cube /Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits
+2024-12-29 01:23:14 DEBUG   GTBinnedAnalysis.setup(): Creating PSF model
+2024-12-29 01:23:14 INFO    GTBinnedAnalysis.run_gtapp(): Running gtbin.
+2024-12-29 01:23:14 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtbin evfile=/Users/qremy/Work/Data/fermi/crab/reduced/ft1_03.fits scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_03.fits algorithm="ccube" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 denergy=0.0 ebinfile=NONE tbinalg="LIN" tstart=0.0 tstop=0.0 dtime=0.0 tbinfile=NONE snratio=0.0 lcemin=0.0 lcemax=0.0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 rafield="RA" decfield="DEC" proj="CAR" hpx_ordering_scheme="RING" hpx_order=3 hpx_ebin=yes hpx_region="" evtable="EVENTS" sctable="SC_DATA" efield="ENERGY" tfield="TIME" chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:14 INFO    GTBinnedAnalysis.run_gtapp(): This is gtbin version HEAD
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtbin. Execution time: 4.56 s
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_03.fits irfs="P8R3_SOURCEVETO_V3" evtype=32 edisp_bins=0 nxpix=360 nypix=180 binsz=1.0 coordsys="GAL" xref=0.0 yref=0.0 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  5
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.69 s
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): Running gtexpcube2.
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtexpcube2 infile=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits cmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_roi_03.fits irfs="P8R3_SOURCEVETO_V3" evtype=32 edisp_bins=0 nxpix=10 nypix=10 binsz=0.2 coordsys="GAL" xref=184.55465500348814 yref=-5.783339352016453 axisrot=0.0 proj="CAR" ebinalg="LOG" emin=398107.1705534969 emax=2511886.4315095823 enumbins=4 ebinfile="NONE" hpx_ordering_scheme="RING" hpx_order=6 bincalc="EDGE" ignorephi=no thmax=180.0 thmin=0.0 table="EXPOSURE" chatter=3 clobber=yes debug=no mode="ql"
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): This is gtexpcube2 version HEAD
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-29 01:23:19 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  5
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Computing binned exposure map....................!
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtexpcube2. Execution time: 0.33 s
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Running gtsrcmaps.
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtsrcmaps scfile=/Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits sctable="SC_DATA" expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_03.fits srcmdl=/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_03.xml bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_03.fits wmap=none outfile=/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_03.fits irfs="P8R3_SOURCEVETO_V3" evtype=32 convol=yes resample=yes rfactor=2 minbinsz=0.05 ptsrc=yes psfcorr=yes emapbnds=no edisp_bins=0 copyall=no chatter=3 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): This is gtsrcmaps version HEAD
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): ResponseFunctions::load: IRF used: P8R3_SOURCEVETO_V3 (PSF)
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): event_types:  5
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201s
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2201i
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named 4FGL J0534.5+2200
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named isodiff
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Creating source named galdiff
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2200 5....................!
+2024-12-29 01:23:20 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201i 5....................!
+2024-12-29 01:23:21 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for 4FGL J0534.5+2201s 5....................!
+2024-12-29 01:23:23 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for galdiff 5....................!
+2024-12-29 01:23:23 INFO    GTBinnedAnalysis.run_gtapp(): Generating SourceMap for isodiff 5....................!
+2024-12-29 01:23:23 INFO    GTBinnedAnalysis.run_gtapp(): ProjMap: extrapolated beyond the maximum energy for map cube file /Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits 5808 times.
+2024-12-29 01:23:23 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtsrcmaps. Execution time: 3.48 s
+2024-12-29 01:23:23 INFO    GTBinnedAnalysis.setup(): Finished setup for component 03
+2024-12-29 01:23:23 INFO    GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis for component 00.
+2024-12-29 01:23:23 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedObs
+2024-12-29 01:23:23 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcMaps': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_00.fits', 'expCube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits', 'binnedExpMap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_00.fits', 'irfs': 'P8R3_SOURCEVETO_V3'}
+2024-12-29 01:23:23 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis
+2024-12-29 01:23:23 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcModel': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_00.xml', 'optimizer': 'MINUIT', 'wmap': None, 'convolve': True, 'resample': True, 'minbinsz': 0.05, 'resamp_fact': 2, 'edisp_bins': 0}
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Disabling energy dispersion for isodiff
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Computing fixed weights
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Updating source maps
+2024-12-29 01:23:24 INFO    GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis for component 01.
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedObs
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcMaps': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_01.fits', 'expCube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits', 'binnedExpMap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_01.fits', 'irfs': 'P8R3_SOURCEVETO_V3'}
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcModel': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_01.xml', 'optimizer': 'MINUIT', 'wmap': None, 'convolve': True, 'resample': True, 'minbinsz': 0.05, 'resamp_fact': 2, 'edisp_bins': 0}
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Disabling energy dispersion for isodiff
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Computing fixed weights
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Updating source maps
+2024-12-29 01:23:24 INFO    GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis for component 02.
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedObs
+2024-12-29 01:23:24 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcMaps': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_02.fits', 'expCube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits', 'binnedExpMap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_02.fits', 'irfs': 'P8R3_SOURCEVETO_V3'}
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcModel': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_02.xml', 'optimizer': 'MINUIT', 'wmap': None, 'convolve': True, 'resample': True, 'minbinsz': 0.05, 'resamp_fact': 2, 'edisp_bins': 0}
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Disabling energy dispersion for isodiff
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Computing fixed weights
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Updating source maps
+2024-12-29 01:23:25 INFO    GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis for component 03.
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedObs
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcMaps': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmap_03.fits', 'expCube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits', 'binnedExpMap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_03.fits', 'irfs': 'P8R3_SOURCEVETO_V3'}
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Creating BinnedAnalysis
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): {'srcModel': '/Users/qremy/Work/Data/fermi/crab/reduced/srcmdl_03.xml', 'optimizer': 'MINUIT', 'wmap': None, 'convolve': True, 'resample': True, 'minbinsz': 0.05, 'resamp_fact': 2, 'edisp_bins': 0}
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Disabling energy dispersion for isodiff
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Computing fixed weights
+2024-12-29 01:23:25 DEBUG   GTBinnedAnalysis._create_binned_analysis(): Updating source maps
+2024-12-29 01:23:25 INFO    GTAnalysis.setup(): Initializing source properties
+2024-12-29 01:23:25 DEBUG   GTAnalysis.setup(): Initializing source 4FGL J0534.5+2200
+2024-12-29 01:23:25 DEBUG   GTAnalysis.get_src_model(): Generating source dict for 4FGL J0534.5+2200
+2024-12-29 01:23:25 DEBUG   GTAnalysis.setup(): Initializing source 4FGL J0534.5+2201i
+2024-12-29 01:23:25 DEBUG   GTAnalysis.get_src_model(): Generating source dict for 4FGL J0534.5+2201i
+2024-12-29 01:23:25 DEBUG   GTAnalysis.setup(): Initializing source 4FGL J0534.5+2201s
+2024-12-29 01:23:25 DEBUG   GTAnalysis.get_src_model(): Generating source dict for 4FGL J0534.5+2201s
+2024-12-29 01:23:25 DEBUG   GTAnalysis.setup(): Initializing source galdiff
+2024-12-29 01:23:25 DEBUG   GTAnalysis.get_src_model(): Generating source dict for galdiff
+2024-12-29 01:23:28 DEBUG   GTAnalysis.setup(): Initializing source isodiff
+2024-12-29 01:23:28 DEBUG   GTAnalysis.get_src_model(): Generating source dict for isodiff
+2024-12-29 01:23:28 INFO    GTAnalysis.setup(): Finished setup.
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis._psf_app(): Computing psf for component 00.
+2024-12-29 01:23:28 DEBUG   GTBinnedAnalysis._psf_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/psf_00.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 4, 'ra': 83.6324, 'dec': 22.01740000000001, 'emin': 398107.1705534969, 'emax': 2511886.4315095823, 'nenergies': 8, 'thetamax': 2.0, 'ntheta': 20}
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis.run_gtapp(): Running gtpsf.
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtpsf expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/psf_00.fits outtable="PSF" irfs="P8R3_SOURCEVETO_V3" evtype=4 ra=83.6324 dec=22.01740000000001 emin=398107.1705534969 emax=2511886.4315095823 nenergies=8 thetamax=2.0 ntheta=20 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtpsf. Execution time: 0.45 s
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis._psf_app(): Computing psf for component 01.
+2024-12-29 01:23:28 DEBUG   GTBinnedAnalysis._psf_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/psf_01.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 8, 'ra': 83.6324, 'dec': 22.01740000000001, 'emin': 398107.1705534969, 'emax': 2511886.4315095823, 'nenergies': 8, 'thetamax': 2.0, 'ntheta': 20}
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis.run_gtapp(): Running gtpsf.
+2024-12-29 01:23:28 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtpsf expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/psf_01.fits outtable="PSF" irfs="P8R3_SOURCEVETO_V3" evtype=8 ra=83.6324 dec=22.01740000000001 emin=398107.1705534969 emax=2511886.4315095823 nenergies=8 thetamax=2.0 ntheta=20 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtpsf. Execution time: 0.38 s
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis._psf_app(): Computing psf for component 02.
+2024-12-29 01:23:29 DEBUG   GTBinnedAnalysis._psf_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/psf_02.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 16, 'ra': 83.6324, 'dec': 22.01740000000001, 'emin': 398107.1705534969, 'emax': 2511886.4315095823, 'nenergies': 8, 'thetamax': 2.0, 'ntheta': 20}
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): Running gtpsf.
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtpsf expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/psf_02.fits outtable="PSF" irfs="P8R3_SOURCEVETO_V3" evtype=16 ra=83.6324 dec=22.01740000000001 emin=398107.1705534969 emax=2511886.4315095823 nenergies=8 thetamax=2.0 ntheta=20 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtpsf. Execution time: 0.38 s
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis._psf_app(): Computing psf for component 03.
+2024-12-29 01:23:29 DEBUG   GTBinnedAnalysis._psf_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/psf_03.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 32, 'ra': 83.6324, 'dec': 22.01740000000001, 'emin': 398107.1705534969, 'emax': 2511886.4315095823, 'nenergies': 8, 'thetamax': 2.0, 'ntheta': 20}
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): Running gtpsf.
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtpsf expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/psf_03.fits outtable="PSF" irfs="P8R3_SOURCEVETO_V3" evtype=32 ra=83.6324 dec=22.01740000000001 emin=398107.1705534969 emax=2511886.4315095823 nenergies=8 thetamax=2.0 ntheta=20 chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtpsf. Execution time: 0.38 s
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis._drm_app(): Computing drm for component 00.
+2024-12-29 01:23:29 DEBUG   GTBinnedAnalysis._drm_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/drm_00.fits', 'cmap': '/Users/qremy/Work/Data/fermi/crab/reduced/ccube_00.fits', 'bexpmap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_00.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 4, 'edisp_bins': 0}
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): Running gtdrm.
+2024-12-29 01:23:29 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtdrm cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_00.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/drm_00.fits irfs="P8R3_SOURCEVETO_V3" evtype=4 expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_00.fits bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_00.fits edisp_bins=0 wmap=none convol=yes resample=yes rfactor=2 minbinsz=0.1 ptsrc=yes psfcorr=yes chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:30 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtdrm. Execution time: 0.74 s
+2024-12-29 01:23:30 INFO    GTBinnedAnalysis._drm_app(): Computing drm for component 01.
+2024-12-29 01:23:30 DEBUG   GTBinnedAnalysis._drm_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/drm_01.fits', 'cmap': '/Users/qremy/Work/Data/fermi/crab/reduced/ccube_01.fits', 'bexpmap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_01.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 8, 'edisp_bins': 0}
+2024-12-29 01:23:30 INFO    GTBinnedAnalysis.run_gtapp(): Running gtdrm.
+2024-12-29 01:23:30 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtdrm cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_01.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/drm_01.fits irfs="P8R3_SOURCEVETO_V3" evtype=8 expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_01.fits bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_01.fits edisp_bins=0 wmap=none convol=yes resample=yes rfactor=2 minbinsz=0.1 ptsrc=yes psfcorr=yes chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:31 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtdrm. Execution time: 0.72 s
+2024-12-29 01:23:31 INFO    GTBinnedAnalysis._drm_app(): Computing drm for component 02.
+2024-12-29 01:23:31 DEBUG   GTBinnedAnalysis._drm_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/drm_02.fits', 'cmap': '/Users/qremy/Work/Data/fermi/crab/reduced/ccube_02.fits', 'bexpmap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_02.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 16, 'edisp_bins': 0}
+2024-12-29 01:23:31 INFO    GTBinnedAnalysis.run_gtapp(): Running gtdrm.
+2024-12-29 01:23:31 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtdrm cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_02.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/drm_02.fits irfs="P8R3_SOURCEVETO_V3" evtype=16 expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_02.fits bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_02.fits edisp_bins=0 wmap=none convol=yes resample=yes rfactor=2 minbinsz=0.1 ptsrc=yes psfcorr=yes chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:32 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtdrm. Execution time: 0.73 s
+2024-12-29 01:23:32 INFO    GTBinnedAnalysis._drm_app(): Computing drm for component 03.
+2024-12-29 01:23:32 DEBUG   GTBinnedAnalysis._drm_app(): {'expcube': '/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits', 'outfile': '/Users/qremy/Work/Data/fermi/crab/reduced/drm_03.fits', 'cmap': '/Users/qremy/Work/Data/fermi/crab/reduced/ccube_03.fits', 'bexpmap': '/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_03.fits', 'irfs': 'P8R3_SOURCEVETO_V3', 'evtype': 32, 'edisp_bins': 0}
+2024-12-29 01:23:32 INFO    GTBinnedAnalysis.run_gtapp(): Running gtdrm.
+2024-12-29 01:23:32 INFO    GTBinnedAnalysis.run_gtapp(): time -p gtdrm cmap=/Users/qremy/Work/Data/fermi/crab/reduced/ccube_03.fits outfile=/Users/qremy/Work/Data/fermi/crab/reduced/drm_03.fits irfs="P8R3_SOURCEVETO_V3" evtype=32 expcube=/Users/qremy/Work/Data/fermi/crab/reduced/ltcube_03.fits bexpmap=/Users/qremy/Work/Data/fermi/crab/reduced/bexpmap_03.fits edisp_bins=0 wmap=none convol=yes resample=yes rfactor=2 minbinsz=0.1 ptsrc=yes psfcorr=yes chatter=2 clobber=yes debug=no gui=no mode="ql"
+2024-12-29 01:23:32 INFO    GTBinnedAnalysis.run_gtapp(): Finished gtdrm. Execution time: 0.73 s
