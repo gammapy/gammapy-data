@@ -13,3 +13,4 @@ gta.setup()
 
 gta.compute_psf(overwrite=True)
 gta.compute_drm(edisp_bins=0, overwrite=True)
+gta.write_weight_map(model_name=None)
