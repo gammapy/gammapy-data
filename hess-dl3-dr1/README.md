@@ -11,7 +11,6 @@ a bit later here:
 
 - https://github.com/lmohrmann/hess_ost_paper_material
 - https://doi.org/10.1051/0004-6361/201936452
-- https://ui.adsabs.harvard.edu/abs/2019arXiv191008088M
 
 The files here contain a copy of the full first public test
 data release, with background models included, and HDU index
@@ -19,3 +18,5 @@ file updated.
 
 It was generated with the `make.py` script in this folder.
 You can run `pytest test.py` to check if the files are OK.
+
+The general licence for these datasets is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
