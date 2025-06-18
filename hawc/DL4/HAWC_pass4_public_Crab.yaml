@@ -1,0 +1,16 @@
+datasets:
+-   name: nHit-5
+    type: MapDataset
+    filename: nHit-5.fits.gz
+-   name: nHit-6
+    type: MapDataset
+    filename: nHit-6.fits.gz
+-   name: nHit-7
+    type: MapDataset
+    filename: nHit-7.fits.gz
+-   name: nHit-8
+    type: MapDataset
+    filename: nHit-8.fits.gz
+-   name: nHit-9
+    type: MapDataset
+    filename: nHit-9.fits.gz

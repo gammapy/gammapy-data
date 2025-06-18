@@ -1,0 +1,54 @@
+data:
+  evfile : /Users/qremy/Work/Data/fermi/crab/raw/events_list.lst
+  scfile : /Users/qremy/Work/Data/fermi/crab/raw/L241227055331F357373F47_SC00.fits
+  ltcube : null
+  
+components:
+  - model: {isodiff: $GAMMAPY_DATA/tests/fermi/iso_P8R3_SOURCEVETO_V3_PSF0_v1.txt}
+    selection: {evtype: 4}
+  - model: {isodiff: $GAMMAPY_DATA/tests/fermi/iso_P8R3_SOURCEVETO_V3_PSF1_v1.txt}
+    selection: {evtype: 8}
+    
+binning:
+  roiwidth   : 2.0
+  binsz      : 0.2
+  binsperdec   : 5
+  coordsys : GAL
+  proj: CAR
+  projtype: WCS
+
+selection :
+#gtselect parameters
+  emin : 398107.1705534969
+  emax : 2511886.4315095823
+  zmax    : 105 # deg
+  evclass : 2048
+  tmin    : 239557417
+  tmax    : 752112005
+
+#gtmktime parameters
+  filter : 'DATA_QUAL>0 && LAT_CONFIG==1'
+  roicut : 'no'
+
+#Set the ROI center to the coordinates of this source
+  glon : 184.55465500348814
+  glat : -5.783339352016454
+
+fileio:
+   outdir : '' # PSF1, PSF2, PSF1
+   logfile : 'out.log' # PSF1, PSF2, PSF1
+   usescratch : False
+   scratchdir  : '/scratch'
+
+gtlike:
+  edisp : True
+  edisp_bins : 0 #-1
+  irfs : 'P8R3_SOURCEVETO_V3' # PSF1, PSF2, PSF1
+  edisp_disable : ['isodiff'] #, 'SunMoonIC', 'SunDiskMoon'] #  #Provide a list of sources for which the edisp correction should be disabled ?? ----> If sun and moon is not in the line of sight of the 
+
+model:
+  src_roiwidth : 2.0
+  galdiff  : '/Users/qremy/Work/Data/diffuse_model/fermi/gll_iem_v07.fits'
+  catalogs :
+    - '/Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/gll_psc_v32.fit'
+  extdir : '/Users/qremy/Work/GitHub/gammapy-data/catalogs/fermi/Extended_14years'
