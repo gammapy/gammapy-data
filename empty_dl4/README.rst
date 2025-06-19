@@ -1,4 +1,4 @@
-This contains an empty DL4 `MapDataset` created from obs 1d 20275 from the
+This contains an empty field DL4 `MapDataset` created from obs id 20275 from the
 H.E.S.S. DL3 DR1 supplied with GAMMAPY_DATA.
 
 Gammapy data © 2025 by Gammapy Coordination Committee is licensed under CC BY-NC-SA 4.0.
