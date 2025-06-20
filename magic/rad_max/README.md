@@ -1,4 +1,5 @@
-# MAGIC observations with RAD_MAX table 
+MAGIC observations with RAD_MAX table 
+=====================================
 
 The two MAGIC observations in this directory provide point-like IRF components with [an energy-dependent directional cut](https://gamma-astro-data-formats.readthedocs.io/en/latest/irfs/point_like/#rad-max-2d).
 
@@ -8,3 +9,5 @@ The two runs are a reprocessed version of the two publicly released for the [joi
 
 These data are preliminary and might be updated following future updates in the the MAGIC DL3 converter.    
 Last update: 26/11/2021
+
+Gammapy data © 2020 by Gammapy Coordination Committee is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
