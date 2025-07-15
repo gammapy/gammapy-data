@@ -4,4 +4,4 @@ The VERITAS data included in this dataset are intended for use with Gammapy tuto
 
 Please see the [VERITAS contact page](https://veritas.sao.arizona.edu/contact-topmenu) if you have any questions about data usage. 
 
-Gammapy data © 2021 by Gammapy Coordination Committee is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/.
+Gammapy data © 2021 by Gammapy Coordination Committee is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/).
