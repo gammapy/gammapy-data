@@ -31,19 +31,27 @@ def create(estimates):
     for estimate in estimates:
         analysis = run_analysis(estimate)
 
-        if estimate is "crab_hess_fp":
+        if estimate == "crab_hess_fp":
             analysis.get_flux_points()
             analysis.flux_points.write(f"{estimate}/{estimate}.fits", overwrite=True)
 
-        elif estimate is "pks2155_hess_lc":
+        elif estimate == "pks2155_hess_lc":
             analysis.get_light_curve()
             analysis.light_curve.write(f"{estimate}/{estimate}.fits", format="lightcurve", overwrite=True)
 
+            # Save with 3bins
+            config_3bins = AnalysisConfig.read(f"{estimate}/config.yaml")
+            config_3bins.light_curve.energy_edges.nbins = 3
+            analysis_3bin = run_analysis(estimate, config=config_3bins)
+            analysis_3bin.get_light_curve()
+            analysis_3bin.light_curve.write(f"{estimate}/{estimate}_3bins.fits", format="lightcurve", overwrite=True)
 
 
-def run_analysis(estimate):
+
+def run_analysis(estimate, config=None):
     """Run analysis from observation selection to model fitting."""
-    config = AnalysisConfig.read(f"{estimate}/config.yaml")
+    if config is None:
+        config = AnalysisConfig.read(f"{estimate}/config.yaml")
     analysis = Analysis(config)
     analysis.get_observations()
     analysis.get_datasets()
