@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Licensed under a 3-clause BSD style license - see LICENSE.rst
 # -*- coding: utf-8 -*-
 """
 Created on Tue Dec 24 14:14:44 2024
