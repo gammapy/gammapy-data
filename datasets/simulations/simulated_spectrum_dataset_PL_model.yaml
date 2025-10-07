@@ -1,0 +1,19 @@
+components:
+-   name: source
+    type: SkyModel
+    spectral:
+        type: PowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.0
+        -   name: amplitude
+            value: 1.0e-12
+            unit: TeV-1 s-1 cm-2
+        -   name: reference
+            value: 1.0
+            unit: TeV
+covariance: simulated_spectrum_dataset_PL_model_covariance.dat
+metadata:
+    creator: Gammapy 2.0.dev2334+g1131f6511
+    date: '2025-10-07T15:37:42.034538'
+    origin: null
