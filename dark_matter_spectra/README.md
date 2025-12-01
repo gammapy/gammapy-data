@@ -7,7 +7,7 @@ Spectra from **PPPC4 DM ID** can be found in folder `PPPC4DMID`:
 
 Spectra from **CosmiXs** can be found in folder `cosmixs`:
 - Taken from: https://github.com/ajueid/CosmiXs  
-- Licence: *CosmiXs: Cosmic messenger spectra for indirect dark matter searches* 
+- Licence: *CosmiXs: Cosmic messenger spectra for indirect dark matter searches*. See cosmixs/LICENCE.rst for the full text.
 - Key references for CosmiXs:
     - C. Arina, M. Di Mauro, N. Fornengo, J. Heisig, A. Jueid, R. Ruiz de Austri, *JCAP* 03 (2024) 035.
     - M. Di Mauro, N. Fornengo, A. Jueid, R. Ruiz de Austri, F. Bellini, *Phys. Rev. Lett.* 135 (2025) 13, 131002.
