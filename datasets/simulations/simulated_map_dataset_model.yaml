@@ -1,0 +1,50 @@
+components:
+-   type: FoVBackgroundModel
+    datasets_names:
+    - E4h3eiR-
+    spectral:
+        type: PowerLawNormSpectralModel
+        parameters:
+        -   name: tilt
+            value: 0.0
+        -   name: norm
+            value: 1.0
+        -   name: reference
+            value: 1.0
+            unit: TeV
+-   name: source
+    type: SkyModel
+    spectral:
+        type: PowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.0
+        -   name: amplitude
+            value: 1.0e-11
+            unit: TeV-1 s-1 cm-2
+        -   name: reference
+            value: 1.0
+            unit: TeV
+    spatial:
+        type: GaussianSpatialModel
+        frame: galactic
+        parameters:
+        -   name: lon_0
+            value: 0.0
+            unit: deg
+        -   name: lat_0
+            value: 0.0
+            unit: deg
+        -   name: sigma
+            value: 0.4
+            unit: deg
+        -   name: e
+            value: 0.0
+        -   name: phi
+            value: 0.0
+            unit: deg
+covariance: simulated_map_dataset_model_covariance.dat
+metadata:
+    creator: Gammapy 2.0
+    date: '2026-01-21T10:32:26.749848'
+    origin: null

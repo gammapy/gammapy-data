@@ -53,11 +53,13 @@ def simulate_map_dataset(random_state=0, name=None):
     dataset = maker.run(empty, obs)
 
     bkg_model = FoVBackgroundModel(dataset_name=dataset.name)
+    models = Models([bkg_model, skymodel])
 
-    dataset.models = [bkg_model, skymodel]
+    dataset.models = models
     dataset.fake(random_state=random_state)
 
-    return dataset
+    return dataset, models
 
-dataset = simulate_map_dataset()
+dataset, models = simulate_map_dataset()
 dataset.write('simulated_map_dataset.fits', overwrite=True)
+models.write('simulated_map_dataset_model.yaml', overwrite=True)
