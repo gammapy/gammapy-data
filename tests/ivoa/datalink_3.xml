@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Produced with astropy.io.votable version 7.1.0
+     http://www.astropy.org/ -->
+<VOTABLE version="1.5" xmlns="http://www.ivoa.net/xml/VOTable/v1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.3 http://www.ivoa.net/xml/VOTable/VOTable-1.5.xsd">
+ <RESOURCE type="results">
+  <INFO ID="server_software" name="server_software" value="DaCHS/2.13 twistedWeb/22.4.0">Software that produced this VOTable</INFO>
+  <INFO ID="server" name="server" value="http://voparis-tap-he.obspm.fr">Base URI of the server</INFO>
+  <INFO ID="citation" name="citation" ucd="" value="http://voparis-tap-he.obspm.fr/hess_dr/q/datalink/howtocite">Advice on citing this resource</INFO>
+  <INFO ID="publication_id" name="publication_id" ucd="meta.bib" value="https://www.mpi-hd.mpg.de/hfm/HESS/pages/dl3-dr1/">A bibliographic source citable for (parts of) this data</INFO>
+  <INFO ID="ivoid_service" name="ivoid_service" ucd="meta.ref.ivoid" value="ivo://padc.obspm.he/hess_dr/q/cone">Originating VO service</INFO>
+  <INFO ID="ivoid_service" name="ivoid_service" ucd="meta.ref.ivoid" value="ivo://padc.obspm.he/hess_dr/q/obscore">Originating VO service</INFO>
+  <INFO ID="publisher" name="publisher" value="Paris Astronomical Data Centre">Data centre that has delivered the data</INFO>
+  <INFO ID="rights" name="rights" value=" H.E.S.S. collaboration, 2018.  The data and documentation is publicly released by the H.E.S.S. collaboration as a contribution to the ongoing efforts to define a common open format for data level 3 of imaging atmospheric Cherenkov telescopes (IACTs) and IACT open-source science tool development, to enlarge the community involved in IACT data analysis.  No scientific publications may be derived from the data. Using the data for new claims about the astrophysical sources is not permitted.  When using this data, please include the following attribution:  &quot;This work made use of data from the H.E.S.S. DL3 public test data release 1 (HESS DL3 DR1, H.E.S.S. collaboration, 2018)&quot;.  Alternatively, use the following shorter version, e.g. for presentations:  &quot;HESS DL3 DR1, H.E.S.S. collaboration&quot;.  These terms of use must be included in all copies in full or part of the data.  https://www.mpi-hd.mpg.de/hfm/HESS/pages/dl3-dr1/">Legal conditions applicable to (parts of) the data contained</INFO>
+  <INFO ID="request_date" name="request_date" ucd="time.creation" value="2026-04-30T15:22:06Z"/>
+  <INFO ID="contact" name="contact" ucd="meta.email" value="mathieu.servillat@obspm.fr">Contact option</INFO>
+  <INFO ID="reference_url" name="reference_url" ucd="meta.ref.url" value="http://voparis-tap-he.obspm.fr/hess_dr/q/datalink/info">More information on the data Source</INFO>
+  <INFO ID="creator" name="creator" ucd="meta.bib.author" value="H.E.S.S. collaboration">Name of a person or entity that produced a contributing resource</INFO>
+  <INFO ID="QUERY_STATUS" name="QUERY_STATUS" value="OK"/>
+  <INFO ID="standardID" name="standardID" value="ivo://ivoa.net/std/datalink#links-1.1">Written by DaCHS 2.13 DatalinkCore</INFO>
+  <INFO ID="request" name="request" value="http://voparis-tap-he.obspm.fr/hess_dr/q/datalink/dlmeta?ID=23592">Request string that produced this VOTable</INFO>
+  <TABLE ID="dlresponse" name="dlresponse" nrows="8">
+   <DESCRIPTION>
+    Data links for data sets.
+   </DESCRIPTION>
+   <FIELD ID="ID" arraysize="*" datatype="char" name="ID" ucd="meta.id;meta.main">
+    <DESCRIPTION>
+     Publisher data set id; this is an identifier for the dataset in
+     question and can be used to retrieve the data.
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="access_url" arraysize="*" datatype="char" name="access_url" ucd="meta.ref.url">
+    <DESCRIPTION>
+     URL to retrieve the data or access the service.
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="service_def" arraysize="*" datatype="char" name="service_def" ucd="meta.ref">
+    <DESCRIPTION>
+     Identifier for the type of service if accessURL refers to a
+     service.
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="error_message" arraysize="*" datatype="char" name="error_message" ucd="meta.code.error">
+    <DESCRIPTION>
+     If accessURL is empty, this column gives the reason why.
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="description" arraysize="*" datatype="char" name="description" ucd="meta.note">
+    <DESCRIPTION>
+     More information on this link
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="semantics" arraysize="*" datatype="char" name="semantics" ucd="meta.code">
+    <DESCRIPTION>
+     What kind of data is linked here? Standard identifiers here
+     include science, calibration, preview, info, auxiliary
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="content_type" arraysize="*" datatype="char" name="content_type" ucd="meta.code.mime">
+    <DESCRIPTION>
+     Media type for the data returned.
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="content_length" datatype="long" name="content_length" ucd="phys.size;meta.file" unit="byte">
+    <DESCRIPTION>
+     Size of the resource at access_url.
+    </DESCRIPTION>
+    <VALUES null="-1"/>
+   </FIELD>
+   <FIELD ID="local_semantics" arraysize="*" datatype="char" name="local_semantics" ucd="meta.id.assoc">
+    <DESCRIPTION>
+     An identifier that allows clients to associate rows from
+     different datalink documents on the same service with each other.
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="content_qualifier" arraysize="*" datatype="char" name="content_qualifier">
+    <DESCRIPTION>
+     An identifier for the sort of content obtained by dereferencing
+     the link (e.g., spectrum, image, or cube). Terms here are
+     relative to http://www.ivoa.net/rdf/product-type
+    </DESCRIPTION>
+   </FIELD>
+   <DATA>
+    <TABLEDATA>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592.fits.gz</TD>
+      <TD/>
+      <TD/>
+      <TD>Event list dataset (HDU=EVENTS)</TD>
+      <TD>#this</TD>
+      <TD>image/fits</TD>
+      <TD/>
+      <TD/>
+      <TD>event-list</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592_image.png</TD>
+      <TD/>
+      <TD/>
+      <TD>Preview image of the observation</TD>
+      <TD>#preview-image</TD>
+      <TD>image/png</TD>
+      <TD/>
+      <TD/>
+      <TD>preview</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592_plot.png</TD>
+      <TD/>
+      <TD/>
+      <TD>Preview significance distribution of the observation</TD>
+      <TD>#preview-plot</TD>
+      <TD>image/png</TD>
+      <TD/>
+      <TD/>
+      <TD>preview</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592.fits.gz</TD>
+      <TD/>
+      <TD/>
+      <TD>Effective Area (HDU=AEFF)</TD>
+      <TD>#calibration</TD>
+      <TD>image/fits</TD>
+      <TD/>
+      <TD/>
+      <TD>aeff</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592.fits.gz</TD>
+      <TD/>
+      <TD/>
+      <TD>Energy Dispersion (HDU=EDISP)</TD>
+      <TD>#calibration</TD>
+      <TD>image/fits</TD>
+      <TD/>
+      <TD/>
+      <TD>edisp</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592.fits.gz</TD>
+      <TD/>
+      <TD/>
+      <TD>Point Spread Function (HDU=PSF)</TD>
+      <TD>#calibration</TD>
+      <TD>image/fits</TD>
+      <TD/>
+      <TD/>
+      <TD>psf</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592.fits.gz</TD>
+      <TD/>
+      <TD/>
+      <TD>Background Rate (HDU=BKG)</TD>
+      <TD>#calibration</TD>
+      <TD>image/fits</TD>
+      <TD/>
+      <TD/>
+      <TD>bkgrate</TD>
+     </TR>
+     <TR>
+      <TD>23592</TD>
+      <TD>https://hess-dr.obspm.fr/retrieve/hess_dl3_dr1_obs_id_023592.fits.gz</TD>
+      <TD/>
+      <TD/>
+      <TD>Event bundle (including HDU=EVENTS,GTI,AEFF,EDISP,PSF,BKG)</TD>
+      <TD>#package</TD>
+      <TD>image/fits</TD>
+      <TD/>
+      <TD/>
+      <TD>event-bundle</TD>
+     </TR>
+    </TABLEDATA>
+   </DATA>
+  </TABLE>
+ </RESOURCE>
+</VOTABLE>
